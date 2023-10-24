@@ -7,11 +7,13 @@ package Controlador;
 import Vista.Frame;
 
 
+
 public class Main {
     
 
     public static void main(String args[]) {
-    /* Configuración del look and feel (puedes personalizar según tus preferencias) */
+        
+        
     try {
         for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
             if ("Nimbus".equals(info.getName())) {
@@ -27,5 +29,8 @@ public class Main {
     java.awt.EventQueue.invokeLater(() -> {
         new Frame().setVisible(true);
     });
+    
+       
+    
 }
 }
