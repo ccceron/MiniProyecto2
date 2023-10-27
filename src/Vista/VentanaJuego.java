@@ -13,7 +13,6 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -35,13 +34,9 @@ import javax.swing.Timer;
  */
 public class VentanaJuego extends JFrame {
 
-    //Musica
-   
-
-    private int contador = 0;
-
     
-    //Saber si ya pasaron los tres segundos
+    // Saber si ya pasaron los tres segundos
+    // Cambiar cuano se integre la pantalla principal
     private boolean puedeJugar = true;
     private boolean puedeTirar = true;
     private double tAux = 0;
@@ -121,7 +116,6 @@ public class VentanaJuego extends JFrame {
         //Ruta absoluta//
         rutaAbsoluta = new File("").getAbsolutePath();
 
-    
         //logica
         logica = new Logica();
 
@@ -142,7 +136,7 @@ public class VentanaJuego extends JFrame {
         lblPuntaje = new JLabel("Puntaje: 0000");
         lblPuntaje.setForeground(new Color(255, 255, 255));
         lblPuntaje.setBounds(5, 0, 300, 50);
-        lblPuntaje.setFont(new Font("Serif", Font.PLAIN, 40));
+        lblPuntaje.setFont(new Font("Agency FB", Font.PLAIN, 35));
 
         //Labels de vidas// (temporales)
         listaVidas = new ArrayList<>();
@@ -165,6 +159,14 @@ public class VentanaJuego extends JFrame {
         
         listaBaldosas = new ArrayList<>();
         inicializarBaldosas();
+        // [javax.swing.JLabel[,30,170,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@4f7d0008,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER],
+        // javax.swing.JLabel[,140,170,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@56235b8e,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER], 
+        // javax.swing.JLabel[,440,178,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@3632be31,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER], 
+        // javax.swing.JLabel[,550,178,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@5abca1e0,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER], 
+        // javax.swing.JLabel[,292, 7 ,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@2286778,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER], 
+        // javax.swing.JLabel[,292,108,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@4e9ba398,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER], 
+        // javax.swing.JLabel[,292,353,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@6d7b4f4c,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER], 
+        // javax.swing.JLabel[,292,252,100x100,invalid,hidden,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=javax.swing.ImageIcon@527740a2,disabledIcon=,horizontalAlignment=CENTER,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=,verticalAlignment=CENTER,verticalTextPosition=CENTER]]
 
         //lblContador//
         lblContador = new JLabel();
@@ -187,11 +189,12 @@ public class VentanaJuego extends JFrame {
         for (int i = 0; i < 3; i++) {
             lblFondo.add(listaVidas.get(i));
         }
+        
+        // Cambiando visibilidad de las primeras baldosas
+        modificarBaldosas();
 
         //Añadiendo listenrs//
         btnBlanco.addMouseListener(new ManejadorDeEventosMouse());
-    
-
     }
     
     
@@ -260,6 +263,7 @@ public class VentanaJuego extends JFrame {
 
     //metodo que modifica la visibilidad de las badldosas segun el caso
     private void modificarBaldosas() {
+        System.out.println("Se modificaron las baldosas");
         //Se recorre cda baldosa
         for (int i = 0; i < 8; i++) {
             //Se ponen visibles o no visibles degun el caso
@@ -358,7 +362,7 @@ public class VentanaJuego extends JFrame {
         }
     }
 
-    //clase Manejadroa de eventos de tiempo
+    //clase Manejadora de eventos de tiempo
     private class ManejadorDeEventosTiempo implements ActionListener {
 
         //tiempo

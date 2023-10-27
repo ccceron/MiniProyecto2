@@ -7,6 +7,11 @@ package LogicaJuego;
 import java.util.ArrayList;
 
 
+
+
+/**
+ * Clase que contiene la logica del juego 
+ */
     
 public class Logica {
     private int numeroDeBaldosasAMostrar;//Mientras mayor el numero, mas dificil
@@ -39,9 +44,9 @@ public class Logica {
             int cualBaldosa = (int) (Math.random() * baldosasSinMostrar.size());
             baldosasAMostrar.add(baldosasSinMostrar.get(cualBaldosa));
             baldosasSinMostrar.remove(cualBaldosa);
-        }
-        
+        }   
     }
+    
     
     //indica si la baldosa se esta mostrando
     public boolean baldosaMostrandose(int cualNumero){

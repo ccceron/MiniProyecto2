@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Controlador/Main.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Vista/Vista.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Vista/Frame.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Controlador/Controlador.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Modelo/Modelo.java</file>
+            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/LogicaJuego/Logica.java</file>
+            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Controlador/Baldosas.java</file>
+            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Controlador/Principal.java</file>
+            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/Vista/VentanaJuego.java</file>
+            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/FuncionesAdicionales/MetodoAdicional.java</file>
+            <file>file:/C:/Users/w10/Documents/NetBeansProjects/MiniProyecto2/src/FuncionesAdicionales/BotonMatch.java</file>
         </group>
     </open-files>
 </project-private>

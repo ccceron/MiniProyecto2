@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 
 public class Baldosas {
  
-     private ArrayList<ImageIcon> listaDeBaldosas;
+    private ArrayList<ImageIcon> listaDeBaldosas;
     private final int altoBaldosa = 100;
     private final int anchoBaldosa = 100;
 
