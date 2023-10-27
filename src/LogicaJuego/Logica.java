@@ -7,11 +7,6 @@ package LogicaJuego;
 import java.util.ArrayList;
 
 
-
-
-/**
- * Clase que contiene la logica del juego 
- */
     
 public class Logica {
     private int numeroDeBaldosasAMostrar;//Mientras mayor el numero, mas dificil
