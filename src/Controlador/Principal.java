@@ -8,6 +8,6 @@ import vista.VentanaJuego;
 
 public class Principal {
     public static void main(String[] args) {
-        VentanaJuego jugar = new VentanaJuego();
+        VentanaInicio inicio = new VentanaInicio();
     }
 }
