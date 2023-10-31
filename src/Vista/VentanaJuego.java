@@ -26,6 +26,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.Timer;
+import Vista.VentanaFinal;
 
 
 /**
@@ -301,11 +302,14 @@ public class VentanaJuego extends JFrame {
             //se estbalcen nuevas baldosas
             logica.nuevasBaldosasAMostrar();
             modificarBaldosas();
+            System.out.println(logica.getPuntaje());
+            System.out.println(logica.getAciertos());
         } else {
             tiempo.stop();
             dispose();
 
-            
+            VentanaFinal ventanafinal = new VentanaFinal(logica.getAciertos(), logica.getErrores(), logica.getPuntaje());
+
 
            
         }
@@ -314,6 +318,7 @@ public class VentanaJuego extends JFrame {
 
     // Metodo que muestra las aciones que realiza al acertar
     private void acierto() {
+        
 
         //se pone normal la baldosa anteriroemnet ressaltada
         listaBaldosas.get(baldosaCambiada).setBorder(null);
@@ -335,6 +340,8 @@ public class VentanaJuego extends JFrame {
         modificarBaldosas();
 
         baldosaCambiada = -1;
+        System.out.println(logica.getPuntaje());
+        System.out.println(logica.getAciertos());
     }
 
    

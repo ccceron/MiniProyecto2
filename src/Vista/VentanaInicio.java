@@ -53,14 +53,14 @@ public final class VentanaInicio extends JFrame {
         
         
         //Configuración del Encabezado
-        jpFondoInicial = new PanelFondo("/modelo/fondo2.png"); 
+        jpFondoInicial = new PanelFondo("/imagenes/Fondo.jpg"); 
         jpFondoInicial.setSize(700,500);     
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
         
         //Jlabel donde pondré el titulo
-        jlTitulo = new JLabel("F I G U R A S",SwingConstants.CENTER );
+        jlTitulo = new JLabel("A D O S A 2",SwingConstants.CENTER );
         jlTitulo.setBounds(150,80, 400,35);
         jlTitulo.setForeground(Color.GRAY);
         jlTitulo.setFont(new Font("Agency FB", Font.BOLD, 40)); 
@@ -132,7 +132,7 @@ public final class VentanaInicio extends JFrame {
             }
             if(evento.getSource() == btnInstrucciones){                
                 JOptionPane.showMessageDialog(rootPane, """
-                                                        Apareceran en pantalla una serie de baldosas. Las baldosas van cambiando de 1 en 1 mostrando distintos diseños. Podras saber que baldosa cambie en cada momento gracias al reborde de color verde"""
+                                                        Apareceran en pantalla una serie de baldosas. Las baldosas van cambiando de 1 en 1 mostrando distintos diseños, Dale click al boton cuando veas 2 baldosas parecidas"""
                 );
             }
         }
